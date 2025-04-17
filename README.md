@@ -2,17 +2,57 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+---
+
+## 🧩 Components Overview
+
+### `TransactionForm.tsx`
+- Allows users to input a transaction.
+- Includes fields like amount, date, description, and category.
+- Uses Zod and React Hook Form for validation.
+
+### `TransactionList.tsx`
+- Displays transactions grouped by date or category.
+- Supports delete/edit actions.
+
+### `MonthlyBarChart.tsx`
+- Shows income and expense totals per month using `Recharts`.
+
+### `SummaryCards.tsx`
+- Displays cards for total income, expense, and balance for the month.
+
+### `CategoryPieChart.tsx`
+- Pie chart showing expense distribution by category.
+
+### `BudgetForm.tsx`
+- Lets users set budget limits per category per month.
+
+### `BudgetVsActualChart.tsx`
+- Compares budgeted vs actual expenses in a stacked bar chart.
+
+### `BudgetInsights.tsx`
+- Displays helpful messages about overspending or savings.
+
+---
+
+## 🧪 Development Notes
+
+- All components are built with **shadcn/ui** and **Tailwind CSS** for a clean and responsive UI.
+- Data is fetched using **Server Components** or **API routes** (e.g., `/api/transactions`, `/api/budgets`).
+- Charts use `recharts` for flexible and powerful data visualizations.
+- All views auto-refresh using `useEffect` and `router.refresh()` after form actions.
+
+---
+
+## 🔧 Running the Project
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
