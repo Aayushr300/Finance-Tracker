@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic'
+
+
 import { Suspense } from 'react';
 import { Transaction } from '@/models/Transaction';
 import { connectDB } from '@/lib/db';
